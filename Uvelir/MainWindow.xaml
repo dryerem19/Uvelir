@@ -1,0 +1,48 @@
+﻿<Window x:Class="Uvelir.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uvelir"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        MinWidth="800"
+        MinHeight="600"
+        FontFamily="Comic Sans MS"
+        FontSize="14">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="90*" />
+        </Grid.RowDefinitions>
+        <Grid Background="#FF76E383">
+            <Image Source="/Resources/logo.png"
+                   HorizontalAlignment="Left"
+                   Margin="30, 10, 0, 10"
+                   MaxHeight="60" />
+            <TextBlock Text="ООО ЮВЕЛИР"
+                       FontSize="24"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="Fuchsia" />
+            <Button Name="HeaderButton"
+                    Background="#FF498C51"
+                    Foreground="White"
+                    FontSize="16"
+                    Content="Выход"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    MinWidth="200"
+                    MinHeight="40"
+                    Margin="0, 0, 20, 0"
+                    Click="Button_Click" />
+        </Grid>
+        <Frame Name="NavigationFrame"
+               NavigationUIVisibility="Hidden"
+               Navigated="NavigationFrame_Navigated"
+               Grid.Row="1" />
+
+    </Grid>
+
+</Window>
